@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
@@ -33,8 +33,17 @@ export default {
           darkMode: "#1f1f1f", // Gris más oscuro para modo oscuro
         },
       },
+      keyframes: {
+        slideIn: {
+          from: { opacity: 0, transform: "translateY(100px)" },
+          to: { opacity: 1, transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        slideIn: "slideIn 2s ease-out",
+      },
     },
-    darkMode: "media", // Modo oscuro basado en las preferencias del sistema
   },
+  darkMode: "media", // Activar modo oscuro basado en las preferencias del sistema
   plugins: [],
 };
