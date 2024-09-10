@@ -6,31 +6,32 @@ export default {
       colors: {
         primary: {
           DEFAULT: "#eb6209",
-          light: "#f28a39", // Un tono más claro de naranja
-          dark: "#b34d08", // Un tono más oscuro de naranja
-          contrast: "#ffffff", // Blanco para un alto contraste
-          darkMode: "#c74f07", // Tono de naranja para modo oscuro
+          light: "#f28a39",
+          medium: "#d96d18",
+          dark: "#b34d08",
+          contrast: "#ffffff",
+          darkMode: "#c74f07",
         },
         secondary: {
           DEFAULT: "#023671",
-          light: "#0450a3", // Un tono más claro de azul
-          dark: "#01254e", // Un tono más oscuro de azul
-          contrast: "#ffffff", // Blanco para un alto contraste
-          darkMode: "#022a5b", // Tono de azul para modo oscuro
+          light: "#0450a3",
+          dark: "#01254e",
+          contrast: "#ffffff",
+          darkMode: "#022a5b",
         },
         accent: {
-          orange: "#ff8c42", // Un color naranja más vibrante
-          blue: "#0070c0", // Un azul más vibrante
+          orange: "#ff8c42",
+          blue: "#0070c0",
           darkMode: {
-            orange: "#e57a3b", // Tono de naranja vibrante para modo oscuro
-            blue: "#005b9a", // Tono de azul vibrante para modo oscuro
+            orange: "#e57a3b",
+            blue: "#005b9a",
           },
         },
         neutral: {
-          light: "#f3f4f6", // Un gris muy claro
-          dark: "#374151", // Un gris oscuro
-          darker: "#242424", // El gris oscuro adicional
-          darkMode: "#1f1f1f", // Gris más oscuro para modo oscuro
+          light: "#f3f4f6",
+          dark: "#374151",
+          darker: "#242424",
+          darkMode: "#1f1f1f",
         },
       },
       keyframes: {
@@ -44,6 +45,6 @@ export default {
       },
     },
   },
-  darkMode: "media", // Activar modo oscuro basado en las preferencias del sistema
+  darkMode: "media", // O "class" si quieres controlarlo manualmente
   plugins: [],
 };

@@ -1,24 +1,16 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
+import NavBarMobileMenu from "./NavBarMobileMenu"; // Menú para móviles
+import NavBarDesktopMenu from "./NavBarDesktopMenu"; // Menú para pantallas grandes
 import useScrollOpacity from "../../hooks/scrollHooks";
-import NavBarList from "./NavBarList";
-import NavBarMenu from "./NavBarMenu";
 
 export const NavBar: React.FC = () => {
-  const [hydrated, setHydrated] = useState(false);
-  const scrolling = useScrollOpacity(50);
-
-  // Este efecto asegura que el componente esté montado en el cliente
-  useEffect(() => {
-    setHydrated(true);
-  }, []);
+  const scrolling = useScrollOpacity(50); // Cambia la opacidad cuando el scroll supera los 50px
 
   return (
     <header
       id="header"
-      className={`bg-neutral-light text-black fixed top-0 left-0 w-full z-50 transition-opacity duration-300 ${
-        hydrated && scrolling ? "lg:opacity-75" : "opacity-100"
+      className={`bg-neutral-light fixed top-0 left-0 w-full z-10 transition-colors ease-in-out duration-700 ${
+        scrolling ? "bg-opacity-90 text-black" : "bg-opacity-10 text-white"
       }`}
     >
       <nav
@@ -27,16 +19,18 @@ export const NavBar: React.FC = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">TECNA Corp</span>
             <img
-              alt=""
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src="/assets/img/logo.png"
+              alt="TECNA Corp logo"
               className="h-8 w-auto"
             />
           </a>
         </div>
-        <NavBarList />
-        <NavBarMenu />
+        {/* Menú para móviles */}
+        <NavBarMobileMenu />
+        {/* Menú para pantallas grandes */}
+        <NavBarDesktopMenu />
       </nav>
     </header>
   );

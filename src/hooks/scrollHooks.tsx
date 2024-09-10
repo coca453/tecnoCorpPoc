@@ -1,26 +1,19 @@
 import { useState, useEffect } from "react";
 
-const useScrollOpacity = (threshold: number = 50): boolean => {
-  const [scrolling, setScrolling] = useState<boolean>(false);
+export default function useScrollOpacity(threshold = 50) {
+  const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const onScroll = () => {
       if (window.scrollY > threshold) {
         setScrolling(true);
       } else {
         setScrolling(false);
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Llama a handleScroll al montar el componente
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, [threshold]);
 
   return scrolling;
-};
-
-export default useScrollOpacity;
+}
