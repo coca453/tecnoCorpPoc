@@ -10,7 +10,7 @@ export const NavBar: React.FC = () => {
     <header
       id="header"
       className={`bg-neutral-light fixed top-0 left-0 w-full z-10 transition-colors ease-in-out duration-700 ${
-        scrolling ? "bg-opacity-90 text-black" : "bg-opacity-10 text-white"
+        scrolling ? "bg-opacity-90 text-black" : "bg-opacity-0 text-white"
       }`}
     >
       <nav
@@ -21,9 +21,9 @@ export const NavBar: React.FC = () => {
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">TECNA Corp</span>
             <img
-              src="/assets/img/logo.png"
+              src="/assets/img/logo.webp"
               alt="TECNA Corp logo"
-              className="h-8 w-auto"
+              className="h-16 w-auto"
             />
           </a>
         </div>
