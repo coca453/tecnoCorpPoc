@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Feature } from "../components/Feature/Feature";
+import { Map } from "../components/Map/Map";
 const items = [
   "INGENIERÍA",
   "PLANTAS LLAVE EN MANO",
@@ -12,24 +14,30 @@ const items = [
 ---
 
 <Layout title="TECNA Corp - Proyectos Oil&Gas y Energía">
-  <main class="text-white h-[5000px]">
-    <div class="relative w-full">
-      <img
-        src="/assets/img/home.webp"
-        alt="TECNA Corp"
-        class="w-full h-full object-cover absolute mix-blend-overlay object-bottom"
-      />
-      <div class="relative flex z-10">
-        <div
-          class="animate-slideIn py-10 md:py-36 md:pr-40 lg:py-56 lg:pr-[50rem]"
-        >
-          <h2 class="text-2xl p-8 md:p-16 md:text-4xl">
-            <span class="font-bold"> TECNA Corp. </span>
-            nos especializamos en la ejecución de proyectos en el sector Oil&Gas
-            y Energía.
-          </h2>
+  <main class="overflow-hidden content-center">
+    <section class="p-2 mx-auto w-[99%]">
+      <div class="relative w-full bg-custom-gradient rounded-3xl">
+        <img
+          src="/assets/img/home.webp"
+          alt="TECNA Corp"
+          class="w-full h-full object-cover mix-blend-overlay absolute object-center rounded-3xl"
+        />
+        <div class="relative flex z-10">
+          <div
+            class="animate-slideIn py-10 md:py-36 md:pr-40 lg:py-56 lg:pr-[50rem] text-gray-200"
+          >
+            <h2 class="text-2xl p-8 md:p-16 md:text-6xl">
+              <span class="font-bold"> TECNA Corp. </span>
+              nos especializamos en la ejecución de proyectos en el sector Oil&Gas
+              y Energía.
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="my-2">
+      <Feature />
+    </section>
+    <section class="p-2 mx-auto w-[99%]"><Map /></section>
   </main>
 </Layout>

@@ -34,6 +34,10 @@ export default {
           darkMode: "#1f1f1f",
         },
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(135deg, rgba(56,190,201,0.75) 24%, rgba(16,42,67,0.95) 80%)",
+      },
       keyframes: {
         slideIn: {
           from: { opacity: 0, transform: "translateY(100px)" },

@@ -11,10 +11,6 @@ body {
   height: 100%;
 }
 
-body {
-  background-color: #f3f4f6; /* Fondo claro por defecto */
-}
-
 a {
   text-decoration: none;
   color: inherit;

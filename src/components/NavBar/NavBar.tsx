@@ -9,21 +9,23 @@ export const NavBar: React.FC = () => {
   return (
     <header
       id="header"
-      className={`bg-neutral-light fixed top-0 left-0 w-full z-10 transition-colors ease-in-out duration-700 ${
-        scrolling ? "bg-opacity-90 text-black" : "bg-opacity-0 text-white"
+      className={`fixed top-0 left-0 w-full z-20 transition-colors ease-in-out duration-700 ${
+        scrolling
+          ? "bg-neutral-light text-black border-b-2 border-gray-300"
+          : "text-white"
       }`}
     >
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">TECNA Corp</span>
             <img
-              src="/assets/img/logo.webp"
+              src="/assets/img/logo.png"
               alt="TECNA Corp logo"
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </a>
         </div>
