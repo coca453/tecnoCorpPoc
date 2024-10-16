@@ -36,7 +36,7 @@ export default {
       },
       backgroundImage: {
         "custom-gradient":
-          "linear-gradient(135deg, rgba(56,190,201,0.75) 24%, rgba(16,42,67,0.95) 80%)",
+          "linear-gradient(135deg, rgba(117,189,201,0.75) 24%, rgba(16,42,67,0.95) 80%)",
       },
       keyframes: {
         slideIn: {

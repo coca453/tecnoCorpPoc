@@ -15,12 +15,7 @@ const { title } = Astro.props;
     <link rel="stylesheet" href="/src/style/global.css" />
     <title>{title}</title>
   </head>
-  <body class="antialiased bg-slate-100">
-    <!-- NavBar is hydrated on the client side with React -->
-    <NavBar client:load />
-
-    <!-- This is where the page content will be injected -->
-
+  <body class="antialiased">
     <slot />
   </body>
 </html>
