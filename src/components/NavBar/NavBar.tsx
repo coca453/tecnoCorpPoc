@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 
@@ -7,14 +7,33 @@ const navigation = [
   { name: "Features", href: "#" },
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
-  { name: "Log in", href: "#" },
 ];
 
 export const NavBar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Set to true if scrolled more than 50px
+      if (scrollY > 50) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 p-5 ${
+        hasScrolled ? "bg-white bg-opacity-70 shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
           <nav
