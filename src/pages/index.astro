@@ -1,18 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Feature } from "../components/Feature/Feature";
-import { Map } from "../components/Map/Map";
-import { NavBar } from "../components/NavBar/NavBar";
 import Logo from "../components/Logo/Logo.astro";
-const items = [
-  "INGENIERÍA",
-  "PLANTAS LLAVE EN MANO",
-  "PLANTAS MODULARES",
-  "GERENCIAMIENTO DE PROYECTOS",
-  "INSPECCIÓN / FISCALIZACIÓN DE PROYECTOS",
-  "AUTOMATIZACIÓN Y CONTROL",
-  "OPERACIÓN Y MANTENIMIENTO",
-];
+import Container from "../components/Container/Container.astro";
+import GridBento from "../components/Grid/GridBento.astro";
+import { Feature } from "../components/Feature/Feature";
 ---
 
 <Layout title="TECNA Corp - Proyectos Oil&Gas y Energía">
@@ -73,11 +64,11 @@ const items = [
     <section>
       <Logo />
     </section>
-    <section>
+    <Container>
+      <GridBento />
+    </Container>
+    <Container>
       <Feature />
-    </section>
-    <section>
-      <Map />
-    </section>
+    </Container>
   </main>
 </Layout>

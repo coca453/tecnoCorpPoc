@@ -31,7 +31,7 @@ export const NavBar: React.FC = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 p-5 ${
-        hasScrolled ? "bg-white bg-opacity-70 shadow-lg" : "bg-transparent"
+        hasScrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl">
