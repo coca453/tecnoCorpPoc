@@ -1,7 +1,17 @@
 ---
+import AboutUs from "../components/AboutUs/AboutUs.astro";
+import OurTeam from "../components/AboutUs/ourTeam.astro";
+import Container from "../components/Container/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="text-white">test home</div>
+  <main class="overflow-hidden">
+    <Container pBottom={true} pTop={true}>
+      <AboutUs />
+    </Container>
+    <Container pTop={true}>
+      <OurTeam />
+    </Container>
+  </main>
 </Layout>

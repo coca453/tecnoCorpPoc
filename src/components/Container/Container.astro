@@ -1,8 +1,22 @@
 ---
+export interface Props {
+  pTop?: boolean;
+  pBottom?: boolean;
+}
 
+const { pTop = false, pBottom = false } = Astro.props;
+
+const paddingClass =
+  !pTop && !pBottom
+    ? "py-24 sm:py-32"
+    : pTop
+      ? "pt-24 sm:pt-32"
+      : pBottom
+        ? "pb-24 sm:pb-32"
+        : "";
 ---
 
-<section class="py-24 sm:py-32">
+<section class={paddingClass}>
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <slot />
   </div>

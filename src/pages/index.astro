@@ -4,6 +4,7 @@ import Logo from "../components/Logo/Logo.astro";
 import Container from "../components/Container/Container.astro";
 import GridBento from "../components/Grid/GridBento.astro";
 import { Feature } from "../components/Feature/Feature";
+import Contact from "../components/Contact/Contact.astro";
 ---
 
 <Layout title="TECNA Corp - Proyectos Oil&Gas y Energía">
@@ -23,7 +24,7 @@ import { Feature } from "../components/Feature/Feature";
               </svg>
 
               <div
-                class="relative px-6 py-32 sm:py-24 lg:px-8 lg:py-72 lg:pr-0"
+                class="relative px-6 py-32 sm:py-24 lg:px-8 lg:py-64 lg:pr-0"
               >
                 <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                   <h1
@@ -37,14 +38,9 @@ import { Feature } from "../components/Feature/Feature";
                   </p>
                   <div class="mt-10 flex items-center gap-x-6">
                     <a
-                      href="#"
+                      href="/about"
                       class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                      >Get started</a
-                    >
-                    <a
-                      href="#"
-                      class="text-sm font-semibold leading-6 text-gray-900"
-                      >Learn more <span aria-hidden="true">→</span></a
+                      >Sobre Nosotros</a
                     >
                   </div>
                 </div>
@@ -64,11 +60,9 @@ import { Feature } from "../components/Feature/Feature";
     <section>
       <Logo />
     </section>
-    <Container>
-      <GridBento />
-    </Container>
-    <Container>
+    <Container pBottom={false} pTop={false}>
       <Feature />
     </Container>
+    <Contact />
   </main>
 </Layout>

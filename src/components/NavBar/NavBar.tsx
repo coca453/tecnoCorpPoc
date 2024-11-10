@@ -43,7 +43,7 @@ export const NavBar: React.FC = () => {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                alt="Your Company"
+                alt="tecnaCorp Logo"
                 src="/assets/img/logo.webp"
                 className="h-8 w-auto"
               />
