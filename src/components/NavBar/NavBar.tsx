@@ -3,15 +3,18 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Quiénes somos", href: "about" },
+  { name: "Contacto", href: "contacto" },
 ];
 
-export const NavBar: React.FC = () => {
+export const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+  useEffect(() => {
+    // Asegura que `window.location` esté disponible en el cliente
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +35,7 @@ export const NavBar: React.FC = () => {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 p-5 ${
         hasScrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
+      } `}
     >
       <div className="mx-auto max-w-7xl">
         <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
@@ -40,7 +43,7 @@ export const NavBar: React.FC = () => {
             aria-label="Global"
             className="flex items-center justify-between lg:justify-start"
           >
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt="tecnaCorp Logo"
@@ -51,7 +54,7 @@ export const NavBar: React.FC = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+              className="-m-2.5 rounded-md p-2.5  lg:hidden"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />

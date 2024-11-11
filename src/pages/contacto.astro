@@ -1,0 +1,20 @@
+---
+import ContactUs from "../components/contactUs/ContactUs.astro";
+import LetsTalk from "../components/contactUs/LetsTalk.astro";
+import Container from "../components/Container/Container.astro";
+import TopSection from "../components/TopSection/TopSection.astro";
+import Layout from "../layouts/Layout.astro";
+
+const topTitle = "Obtén la ayuda que necesitas";
+const title = "Centro de Contacto";
+const descripcion =
+  "Estamos aquí para responder tus preguntas y brindarte el soporte necesario en cada etapa de tu proyecto. Si tienes alguna consulta o requieres asistencia, no dudes en comunicarte con nosotros.";
+---
+
+<Layout>
+  <TopSection title={title} description={descripcion} topTitle={topTitle} />
+  <Container>
+    <ContactUs />
+  </Container>
+  <LetsTalk />
+</Layout>
