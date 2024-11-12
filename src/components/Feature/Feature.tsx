@@ -11,7 +11,7 @@ const features = [
     name: "Plantas Llave en Mano",
     description:
       " Ejecutamos proyectos desde el diseño e ingeniería hasta la construcción y puesta en marcha bajo diversas modalidades contractuales.",
-    icon: "assets/img/iconos/planta _llave_en_mano.webp",
+    icon: "assets/img/iconos/planta_llave_en_mano.webp",
   },
   {
     name: "Plantas Modulares",
@@ -61,7 +61,7 @@ export const Feature = () => {
   return (
     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-4">
       <div>
-        <h2 className="text-base font-semibold leading-7 text-indigo-600">
+        <h2 className="text-base font-semibold leading-7 text-indigo-700">
           Todo lo que necesitas
         </h2>
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -75,7 +75,7 @@ export const Feature = () => {
           asegurando calidad, eficiencia y un alto estándar técnico.
         </p>
       </div>
-      <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-3 lg:gap-y-16">
+      <div className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-3 lg:gap-y-16">
         {features.map((feature) => (
           <div key={feature.name} className="flex items-start space-x-4">
             <img
@@ -91,7 +91,7 @@ export const Feature = () => {
             </div>
           </div>
         ))}
-      </dl>
+      </div>
     </div>
   );
 };

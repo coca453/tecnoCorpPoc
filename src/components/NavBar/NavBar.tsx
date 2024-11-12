@@ -5,6 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 const navigation = [
   { name: "Quiénes somos", href: "about" },
   { name: "Contacto", href: "contacto" },
+  { name: "Clientes", href: "clientes" },
+  { name: "Servicios", href: "servicios" },
 ];
 
 export const NavBar = () => {
@@ -34,7 +36,7 @@ export const NavBar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 p-5 ${
-        hasScrolled ? "bg-white shadow-lg" : "bg-transparent"
+        hasScrolled ? "bg-gray-300 shadow-lg" : "bg-transparent"
       } `}
     >
       <div className="mx-auto max-w-7xl">

@@ -1,0 +1,29 @@
+---
+import LogoSlider from "../components/clientes/LogoSlider";
+import Planificacion from "../components/clientes/Planificacion.astro";
+import Container from "../components/Container/Container.astro";
+import TopSection from "../components/TopSection/TopSection.astro";
+import Layout from "../layouts/Layout.astro";
+
+const topTitle = "Empresas que confían en nosotros";
+const title = "Nuestros Clientes";
+const descripcion =
+  "Nos enorgullece colaborar con empresas líderes en los sectores de Energía, Oil & Gas y Minería. A lo largo de más de 20 años, hemos establecido relaciones sólidas basadas en la confianza y en un compromiso inquebrantable con la excelencia en cada proyecto.";
+---
+
+<Layout>
+  <main>
+    <TopSection title={title} description={descripcion} topTitle={topTitle} />
+    <Container> <Planificacion /> </Container>
+    <Container pTop={true} pBottom={true}>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:max-w-none">
+          <h2 class="text-lg/8 font-semibold text-gray-900 mb-4">
+            Empresas que nos eligen:
+          </h2>
+          <LogoSlider client:load />
+        </div>
+      </div>
+    </Container>
+  </main>
+</Layout>
