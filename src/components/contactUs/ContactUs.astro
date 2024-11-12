@@ -1,47 +1,51 @@
 ---
 const contactInfo = [
   {
-    title: "Collaborate",
-    email: "collaborate@example.com",
-    phone: "+1 (555) 905-2345",
+    title: "Contacto Corporativo",
+    email: "contacto@tecna-corp.com",
+    phone: "+591 3 336 2263",
   },
   {
-    title: "Press",
-    email: "press@example.com",
-    phone: "+1 (555) 905-3456",
+    title: "Contacto Comercial",
+    email: "comercial@tecna-corp.com",
+    phone: "+511 680 6897",
   },
   {
-    title: "Join our team",
-    email: "careers@example.com",
-    phone: "+1 (555) 905-4567",
-  },
-  {
-    title: "Say hello",
-    email: "hello@example.com",
-    phone: "+1 (555) 905-5678",
+    title: "Website",
+    email: "www.tecna-corp.com",
+    phone: null,
   },
 ];
 
 const locations = [
   {
-    city: "Los Angeles",
-    addressLine1: "4556 Brendan Ferry",
-    addressLine2: "Los Angeles, CA 90210",
+    city: "Sede Corporativa - Bolivia",
+    addressLine1: "TECNA BOLIVIA",
+    addressLine2:
+      "Torre ALAS I, Av. Las Ramblas, Piso 10, Santa Cruz de la Sierra, Barrio Equipetrol Norte, BO",
   },
   {
-    city: "New York",
-    addressLine1: "886 Walter Street",
-    addressLine2: "New York, NY 12345",
+    city: "Filial - Perú",
+    addressLine1: "LATINTECNA S.A.",
+    addressLine2: "Calle La Habana 192, San Isidro - Lima, Lima, PE",
   },
   {
-    city: "Toronto",
-    addressLine1: "7363 Cynthia Pass",
-    addressLine2: "Toronto, ON N3Y 4H8",
+    city: "Filial - Ecuador",
+    addressLine1: "TECNA CORP del ECUADOR",
+    addressLine2:
+      "Av Luis Cordero E12-182 y Valladolid, Edif. Iturralde, P8, Quito, EC",
   },
   {
-    city: "Chicago",
-    addressLine1: "726 Mavis Island",
-    addressLine2: "Chicago, IL 60601",
+    city: "Sede - Argentina",
+    addressLine1: "LATINTECNA S.A.",
+    addressLine2:
+      "Avª Alicia Moreau de Justo 2030, 1er piso Of. 120, CABA, 1107, AR",
+  },
+  {
+    city: "Sede - España",
+    addressLine1: "TECNA CORP SL.",
+    addressLine2:
+      "Paseo de la Castellana, num 144 ESC. 1, planta 6, 28046 Madrid, ES",
   },
 ];
 ---
@@ -56,16 +60,19 @@ const locations = [
         <h2
           class="text-pretty text-4xl font-semibold tracking-tight text-gray-900"
         >
-          Get in touch
+          Ponte en contacto
         </h2>
         <p class="mt-4 text-base/7 text-gray-600">
-          Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque.
+          Si tienes alguna pregunta o necesitas información adicional sobre
+          nuestros servicios, no dudes en comunicarte con nosotros. Nuestro
+          equipo está listo para ayudarte a resolver tus dudas y brindarte el
+          soporte que necesitas.
         </p>
       </div>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
         {
           contactInfo.map((contact) => (
-            <div class="rounded-2xl bg-gray-50 p-10">
+            <div class="rounded-2xl bg-gray-200 p-10">
               <h3 class="text-base/7 font-semibold text-gray-900">
                 {contact.title}
               </h3>
@@ -81,10 +88,12 @@ const locations = [
                     </a>
                   </dd>
                 </div>
-                <div class="mt-1">
-                  <dt class="sr-only">Phone number</dt>
-                  <dd>{contact.phone}</dd>
-                </div>
+                {contact.phone && (
+                  <div class="mt-1">
+                    <dt class="sr-only">Phone number</dt>
+                    <dd>{contact.phone}</dd>
+                  </div>
+                )}
               </dl>
             </div>
           ))
@@ -98,17 +107,20 @@ const locations = [
         <h2
           class="text-pretty text-4xl font-semibold tracking-tight text-gray-900"
         >
-          Locations
+          Nuestras ubicaciones
         </h2>
         <p class="mt-4 text-base/7 text-gray-600">
-          Consequat sunt cillum cillum elit sint. Qui occaecat nisi in ipsum
-          commodo.
+          Con presencia en varios países de Latinoamérica y Europa, TECNA CORP
+          está aquí para apoyarte en cada proyecto. Encuéntranos en Bolivia,
+          Perú, Ecuador, Argentina, y España, donde cada una de nuestras sedes y
+          filiales está preparada para ofrecer soluciones integrales en los
+          sectores de Energía, Oil & Gas y Minería.
         </p>
       </div>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
         {
           locations.map((location) => (
-            <div class="rounded-2xl bg-gray-50 p-10">
+            <div class="rounded-2xl bg-gray-200 p-10">
               <h3 class="text-base/7 font-semibold text-gray-900">
                 {location.city}
               </h3>

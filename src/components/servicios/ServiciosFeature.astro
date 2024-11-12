@@ -1,0 +1,69 @@
+---
+import { Icon } from "astro-icon/components";
+const features = [
+  {
+    title: "Sectores",
+    description:
+      "Servicios especializados para distintas industrias, incluyendo Oil & Gas y Minería. Ofrecemos soluciones de ingeniería, optimización de procesos y mantenimiento, adaptándonos a las necesidades de cada sector.",
+    icon: `mdi:factory`,
+    link: "#",
+  },
+  {
+    title: "Servicios de O&M",
+    description:
+      "TECNA CORP posee gran experiencia en diseño, construcción y puesta en marcha de unidades de procesamiento. Proveemos asistencia ante imprevistos y contamos con herramientas, equipos y repuestos, gestionando adquisiciones para el Cliente.",
+    icon: `mdi:toolbox`,
+    link: "#",
+  },
+  {
+    title: "Soporte Integral de TECNA CORP",
+    description:
+      "Nuestra experiencia en diseño, construcción y puesta en marcha de unidades garantiza asistencia ante cambios en el proceso. Ofrecemos equipos, repuestos y gestionamos adquisiciones para satisfacer las necesidades del Cliente.",
+    icon: `mdi:account-group`,
+    link: "#",
+  },
+];
+---
+
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl lg:mx-0">
+    <h2
+      class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+    >
+      Stay on top of customer support
+    </h2>
+    <p class="mt-6 text-lg/8 text-gray-600">
+      Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
+      voluptatum cupiditate veritatis in accusamus quisquam.
+    </p>
+  </div>
+  <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+    <dl
+      class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+    >
+      {
+        features.map((feature) => (
+          <div class="flex flex-col">
+            <div class="text-base/7 font-semibold text-gray-900">
+              <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <Icon name={feature.icon} class="text-white" />
+              </div>
+              {feature.title}
+            </div>
+            <d class="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+              <p class="flex-auto">{feature.description}</p>
+              <p class="mt-6">
+                <a
+                  href={feature.link}
+                  class="text-sm/6 font-semibold text-indigo-600"
+                >
+                  Leer más <span aria-hidden="true">→</span>
+                </a>
+              </p>
+            </d>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</div>

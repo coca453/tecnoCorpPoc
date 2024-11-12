@@ -7,13 +7,13 @@ export interface Props {
 const { pTop = false, pBottom = false } = Astro.props;
 
 const paddingClass =
-  !pTop && !pBottom
-    ? "py-24 sm:py-32"
+  pTop && pBottom
+    ? "py-24 sm:py-32" // Cuando ambos son true, se aplica padding arriba y abajo
     : pTop
-      ? "pt-24 sm:pt-32"
+      ? "pt-24 sm:pt-32" // Solo padding en la parte superior
       : pBottom
-        ? "pb-24 sm:pb-32"
-        : "";
+        ? "pb-24 sm:pb-32" // Solo padding en la parte inferior
+        : ""; // Si ambos son falsos, no hay padding
 ---
 
 <section class={paddingClass}>

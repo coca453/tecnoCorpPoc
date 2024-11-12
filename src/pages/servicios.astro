@@ -1,0 +1,20 @@
+---
+import Container from "../components/Container/Container.astro";
+import ServiciosFeature from "../components/servicios/ServiciosFeature.astro";
+import TopSection from "../components/TopSection/TopSection.astro";
+import Layout from "../layouts/Layout.astro";
+
+const topTitle = "Soluciones integrales para la industria";
+const title = "Nuestros Servicios";
+const descripcion =
+  "En TECNA CORP, ofrecemos servicios especializados en Energía, Oil & Gas y Minería. Desde la planificación y control hasta el mantenimiento integral, trabajamos para asegurar la eficiencia y seguridad en cada proyecto.";
+---
+
+<Layout>
+  <main class="overflow-auto">
+    <TopSection title={title} description={descripcion} topTitle={topTitle} />
+    <Container pBottom={true}>
+      <ServiciosFeature />
+    </Container>
+  </main>
+</Layout>
