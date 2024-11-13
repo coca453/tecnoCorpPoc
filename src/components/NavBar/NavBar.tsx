@@ -4,9 +4,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
   { name: "Quiénes somos", href: "about" },
-  { name: "Contacto", href: "contacto" },
-  { name: "Clientes", href: "clientes" },
   { name: "Servicios", href: "servicios" },
+  { name: "Clientes", href: "clientes" },
+  { name: "Certificaciones", href: "certificaciones" },
+  { name: "Contacto", href: "contacto" },
 ];
 
 export const NavBar = () => {
@@ -40,7 +41,7 @@ export const NavBar = () => {
       } `}
     >
       <div className="mx-auto max-w-7xl">
-        <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
+        <div className="px-6 pt-6 lg:max-w-3xl lg:pl-8 lg:pr-0">
           <nav
             aria-label="Global"
             className="flex items-center justify-between lg:justify-start"
@@ -108,14 +109,6 @@ export const NavBar = () => {
                     {item.name}
                   </a>
                 ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>
