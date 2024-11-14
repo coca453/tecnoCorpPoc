@@ -3,6 +3,8 @@ import "../style/global.css";
 import { NavBar } from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer.astro";
 
+import { ViewTransitions } from "astro:transitions";
+
 const { title } = Astro.props;
 console.log(Astro.generator);
 ---
@@ -16,6 +18,8 @@ console.log(Astro.generator);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="test" />
+    <ViewTransitions />
+
     <title>{title}</title>
   </head>
   <body class="antialiased bg-gray-300">
