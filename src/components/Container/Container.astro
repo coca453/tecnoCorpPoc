@@ -2,9 +2,10 @@
 export interface Props {
   pTop?: boolean;
   pBottom?: boolean;
+  hr?: boolean;
 }
 
-const { pTop = false, pBottom = false } = Astro.props;
+const { pTop = false, pBottom = false, hr = false } = Astro.props;
 
 const paddingClass =
   pTop && pBottom
@@ -20,4 +21,11 @@ const paddingClass =
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <slot />
   </div>
+  {
+    hr && (
+      <div class="mt-4 mx-auto max-w-7xl px-2 lg:px-2">
+        <hr />
+      </div>
+    )
+  }
 </section>
