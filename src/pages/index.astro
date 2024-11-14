@@ -6,6 +6,7 @@ import GridBento from "../components/Grid/GridBento.astro";
 import { Feature } from "../components/Feature/Feature";
 import Contact from "../components/Contact/Contact.astro";
 import CompanyHistory from "../components/CompanyHistory/CompanyHistory.astro";
+import ImageSlider from "../components/ImageSlider/ImageSlider";
 ---
 
 <Layout title="TECNA Corp - Proyectos Oil&Gas y Energía">
@@ -49,11 +50,7 @@ import CompanyHistory from "../components/CompanyHistory/CompanyHistory.astro";
             </div>
           </div>
           <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img
-              class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
-              src="/assets/img/home.webp"
-              alt=""
-            />
+            <ImageSlider client:load />
           </div>
         </div>
       </div>
