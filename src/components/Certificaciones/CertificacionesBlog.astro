@@ -3,50 +3,29 @@ const posts = [
   {
     date: "2020-03-16",
     category: "Certificacion",
-    image:
-      "https://tecna-corp.com/wp-content/uploads/2023/10/TR-Testmark_9000013090_EN_CMYK_with-QR-Code.png",
+    image: "assets/img/certificaciones/1.webp",
     title: "Boost your conversion rate",
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo...",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    file: "assets/docs/testCertifacion.txt",
+    file: "assets/docs/9001.pdf",
   },
   {
     date: "2020-03-16",
     category: "Certificacion",
-    image:
-      "https://tecna-corp.com/wp-content/uploads/2023/10/TR-Testmark_9000013090_EN_CMYK_with-QR-Code.png",
+    image: "assets/img/certificaciones/2.webp",
     title: "Boost your conversion rate",
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo...",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    file: "assets/docs/testCertifacion.txt",
+    file: "assets/docs/14001.pdf",
   },
   {
     date: "2020-03-16",
     category: "Certificacion",
-    image:
-      "https://tecna-corp.com/wp-content/uploads/2023/10/TR-Testmark_9000013090_EN_CMYK_with-QR-Code.png",
+    image: "assets/img/certificaciones/3.webp",
     title: "Boost your conversion rate",
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo...",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    file: "assets/docs/testCertifacion.txt",
+    file: "assets/docs/45001.pdf",
   },
   // Agrega más objetos de post aquí
 ];
@@ -60,8 +39,10 @@ const posts = [
       posts.map((post) => (
         <article class="flex flex-col items-start justify-between">
           <div class="relative w-full">
-            <img src={post.image} alt="" class="" />
-            <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+            <a href={post.file}>
+              <img src={post.image} alt="" class="" />
+              <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+            </a>
           </div>
           <div class="max-w-xl">
             <div class="mt-8 flex items-center gap-x-4 text-xs">

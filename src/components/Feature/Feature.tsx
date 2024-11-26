@@ -1,5 +1,3 @@
-import { CheckIcon } from "@heroicons/react/20/solid";
-
 const features = [
   {
     name: "Ingeniería",
@@ -59,15 +57,15 @@ const features = [
 
 export const Feature = () => {
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-      <div>
-        <h2 className="text-base font-semibold leading-7 text-indigo-700">
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+      <div className="">
+        <h2 className="text-base font-semibold leading-7 text-indigo-700 text-center">
           Todo lo que necesitas
         </h2>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">
           Una plataforma integral de soluciones
         </p>
-        <p className="mt-6 text-base leading-7 text-gray-600">
+        <p className="mt-6 text-base leading-7 text-gray-600 text-justify">
           En TECNA CORP, ofrecemos una amplia gama de servicios especializados
           para los sectores de Energía, Oil & Gas y Minería. Desde la ingeniería
           conceptual hasta la operación y mantenimiento, brindamos soluciones
@@ -87,7 +85,9 @@ export const Feature = () => {
               <h3 className="text-lg font-semibold text-gray-900">
                 {feature.name}
               </h3>
-              <p className="mt-2 text-gray-600">{feature.description}</p>
+              <p className="mt-2 text-gray-600 text-justify">
+                {feature.description}
+              </p>
             </div>
           </div>
         ))}
