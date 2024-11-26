@@ -1,0 +1,136 @@
+---
+import { Icon } from "astro-icon/components";
+const items = [
+  {
+    titulo: "Minimizar los riesgos",
+    descripcion: "asociados con cada actividad.",
+    icono: "mdi:alert-circle",
+  },
+  {
+    titulo: "Preservar la seguridad",
+    descripcion: "del personal y los bienes de los clientes.",
+    icono: "mdi:shield-check",
+  },
+  {
+    titulo: "Optimizar recursos",
+    descripcion: "y mejorar índices operativos y de mantenimiento.",
+    icono: "mdi:chart-line",
+  },
+  {
+    titulo: "Ofrecer un servicio de alta calidad",
+    descripcion: "y costo-eficiencia.",
+    icono: "mdi:thumb-up",
+  },
+];
+const item2 = [
+  {
+    titulo: "Mantenimiento preventivo y predictivo",
+    descripcion: "de equipos rotativos y estáticos.",
+    icono: "mdi:wrench",
+  },
+  {
+    titulo: "Inspecciones y limpiezas",
+    descripcion: "de equipos de proceso.",
+    icono: "mdi:magnify",
+  },
+  {
+    titulo: "Intervenciones mayores",
+    descripcion: "en equipos rotativos.",
+    icono: "mdi:cog",
+  },
+  {
+    titulo: "Gestión de procura y logística",
+    descripcion: "para materiales, insumos y repuestos.",
+    icono: "mdi:truck",
+  },
+  {
+    titulo: "Control de almacenes e inventarios",
+    descripcion: ".",
+    icono: "mdi:warehouse",
+  },
+];
+---
+
+<div class="relative">
+  <div
+    class="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end"
+  >
+    <div
+      class="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2"
+    >
+      <div class="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
+        <img
+          class="absolute inset-0 h-full w-full bg-gray-50 object-cover"
+          src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="px-6 lg:contents">
+      <div
+        class="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2"
+      >
+        <p class="text-base/7 font-semibold text-indigo-600">
+          Control y Eficiencia Operativa
+        </p>
+        <h1
+          class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+        >
+          Planificación y Control
+        </h1>
+        <p class="mt-6 text-xl/8 text-gray-700">
+          La planificación de actividades es clave en los servicios de TECNA
+          CORP y asegura el cumplimiento de los objetivos trazados en beneficio
+          de nuestros clientes. Nuestra gestión de planificación y control
+          permite:
+        </p>
+        <div class="mt-10 max-w-xl text-base/7 text-gray-700 lg:max-w-none">
+          <ul role="list" class="mt-8 space-y-8 text-gray-600">
+            {
+              items.map((item) => (
+                <li class="flex gap-x-3 items-center">
+                  <Icon name={item.icono} height={15} width={15} />
+                  <span>
+                    <strong class="font-semibold text-gray-900">
+                      {item.titulo}
+                    </strong>{" "}
+                    {item.descripcion}
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+          <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+            Control Total, Resultados Óptimos
+          </h2>
+          <p class="mt-6">
+            TECNA CORP ha liderado proyectos de planificación en Operación y
+            Mantenimiento, implementando un sistema eficiente de control y
+            gestión. Esta gestión ha incluido:
+          </p>
+          <ul role="list" class="mt-8 space-y-8 text-gray-600">
+            {
+              item2.map((item) => (
+                <li class="flex gap-x-3 items-center">
+                  <Icon name={item.icono} height={15} width={15} />
+                  <span>
+                    <strong class="font-semibold text-gray-900">
+                      {item.titulo}
+                    </strong>{" "}
+                    {item.descripcion}
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+          <p class="mt-6">
+            El desarrollo efectivo de esta gestión permite el control de
+            variables críticas y reportes de fallas, asegurando una operación
+            óptima y el mantenimiento de las instalaciones en las que ejecutamos
+            nuestros servicios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
