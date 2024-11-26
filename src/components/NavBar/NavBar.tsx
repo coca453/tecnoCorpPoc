@@ -19,6 +19,7 @@ export const NavBar = () => {
     setCurrentPath(window.location.pathname);
   }, []);
 
+  console.log(currentPath);
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -41,10 +42,12 @@ export const NavBar = () => {
       } `}
     >
       <div className="mx-auto max-w-7xl">
-        <div className="px-6 pt-6 lg:max-w-3xl lg:pl-8 lg:pr-0">
+        <div
+          className={`px-6 pt-6 lg:pl-6 lg:pr-0 ${currentPath === "/" && "lg:max-w-3xl"}`}
+        >
           <nav
             aria-label="Global"
-            className="flex items-center justify-between lg:justify-start"
+            className={`flex items-center justify-between ${currentPath !== "/" ? "lg:justify-center" : "lg:justify-start"}`}
           >
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -62,7 +65,9 @@ export const NavBar = () => {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
-            <div className="hidden lg:ml-12 lg:flex lg:gap-x-14">
+            <div
+              className={`hidden lg:ml-12 lg:flex lg:gap-x-14 lg:justify-end ${currentPath !== "/" && "w-full lg:justify-around"}`}
+            >
               {navigation.map((item) => (
                 <a
                   key={item.name}

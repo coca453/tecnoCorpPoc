@@ -1,5 +1,24 @@
 ---
-
+const certifications = [
+  {
+    src: "assets/img/certificaciones/1.webp",
+    alt: "ISO-14001-2015",
+    height: 382,
+    width: 140,
+  },
+  {
+    src: "assets/img/certificaciones/2.webp",
+    alt: "ISO-45001-2018",
+    height: 382,
+    width: 140,
+  },
+  {
+    src: "assets/img/certificaciones/3.webp",
+    alt: "ISO-9001-2015",
+    height: 382,
+    width: 140,
+  },
+];
 ---
 
 <div class="bg-gray- py-24 sm:py-32">
@@ -11,36 +30,26 @@
         <span class="hidden md:inline"
           >Comprometidos con la calidad y seguridad.</span
         >
-        <a href="/certificaciones" class="font-semibold text-white"
-          ><span class="absolute inset-0" aria-hidden="true"></span> Ver certificaciones
-          ISO <span aria-hidden="true">&rarr;</span></a
-        >
+        <a href="/certificaciones" class="font-semibold text-white">
+          <span class="absolute inset-0" aria-hidden="true"></span>
+          Ver certificaciones ISO <span aria-hidden="true">&rarr;</span>
+        </a>
       </p>
     </div>
     <div
       class="mx-auto grid max-w-lg grid-cols-1 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-4 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
-      <img
-        class="col-span-2 w-full object-contain lg:col-span-1"
-        src="https://tecna-corp.com/wp-content/uploads/2023/10/TR-Testmark_9000013090_EN_CMYK_with-QR-Code.png"
-        alt="Transistor"
-        height="382"
-        width="140"
-      />
-      <img
-        class="col-span-2 w-full object-contain lg:col-span-1"
-        src="https://tecna-corp.com/wp-content/uploads/2023/10/TR-Testmark_9000013090_EN_CMYK_with-QR-Code.png"
-        alt="Reform"
-        height="382"
-        width="140"
-      />
-      <img
-        class="col-span-2 w-full object-contain lg:col-span-1"
-        src="https://tecna-corp.com/wp-content/uploads/2023/10/TR-Testmark_9000013090_EN_CMYK_with-QR-Code.png"
-        alt="Tuple"
-        height="382"
-        width="140"
-      />
+      {
+        certifications.map((cert) => (
+          <img
+            class="col-span-2 w-full object-contain lg:col-span-1"
+            src={cert.src}
+            alt={cert.alt}
+            height={cert.height}
+            width={cert.width}
+          />
+        ))
+      }
     </div>
   </div>
 </div>
