@@ -1,0 +1,30 @@
+export const posts = [
+  {
+    date: "2020-03-16",
+    category: "Certificacion",
+    image: "assets/img/certificaciones/3.webp",
+    title: "Certificado ISO-9001",
+    description:
+      "ISO 9001 es una norma internacional que especifica los requisitos para un sistema de gestión de la calidad, enfocándose en la eficiencia de los procesos y la satisfacción del cliente.",
+    file: "assets/docs/9001.pdf",
+  },
+  {
+    date: "2020-03-16",
+    category: "Certificacion",
+    image: "assets/img/certificaciones/1.webp",
+    title: "Certificado ISO-14001",
+    description:
+      "ISO 14001 establece los requisitos para un sistema de gestión ambiental, ayudando a las organizaciones a mejorar su desempeño ambiental y reducir el impacto negativo en el medio ambiente.",
+    file: "assets/docs/14001.pdf",
+  },
+  {
+    date: "2020-03-16",
+    category: "Certificacion",
+    image: "assets/img/certificaciones/2.webp",
+    title: "Certificado ISO-45001",
+    description:
+      "ISO 45001 es una norma internacional que especifica los requisitos para un sistema de gestión de la salud y seguridad en el trabajo, destinada a mejorar la seguridad de los trabajadores y reducir riesgos laborales.",
+    file: "assets/docs/45001.pdf",
+  },
+  // Agrega más posts aquí
+];

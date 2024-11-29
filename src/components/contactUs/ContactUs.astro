@@ -15,6 +15,7 @@ const contactInfo = [
   {
     title: "Website",
     email: "www.tecna-corp.com",
+    linkedin: "https://ar.linkedin.com/company/tecna-corp",
     phone: null,
   },
 ];
@@ -64,7 +65,7 @@ const locations = [
         >
           Ponte en contacto
         </h2>
-        <p class="mt-4 text-base/7 text-gray-600">
+        <p class="mt-4 text-base/7 text-gray-600 text-justify">
           Si tienes alguna pregunta o necesitas información adicional sobre
           nuestros servicios, no dudes en comunicarte con nosotros. Nuestro
           equipo está listo para ayudarte a resolver tus dudas y brindarte el
@@ -87,6 +88,14 @@ const locations = [
                       href={`mailto:${contact.email}`}
                     >
                       {contact.email}
+                    </a>
+                  </dd>
+                  <dd>
+                    <a
+                      class="font-semibold text-indigo-600"
+                      href={contact.linkedin}
+                    >
+                      {contact.linkedin && <span>linkedin</span>}
                     </a>
                   </dd>
                 </div>
@@ -112,7 +121,7 @@ const locations = [
         >
           Nuestras ubicaciones
         </h2>
-        <p class="mt-4 text-base/7 text-gray-600">
+        <p class="mt-4 text-base/7 text-gray-600 text-justify">
           Con presencia en varios países de Latinoamérica y Europa, TECNA CORP
           está aquí para apoyarte en cada proyecto. Encuéntranos en Bolivia,
           Perú, Ecuador, Argentina, y España, donde cada una de nuestras sedes y

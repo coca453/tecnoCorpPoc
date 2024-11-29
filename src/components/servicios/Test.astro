@@ -1,0 +1,163 @@
+---
+const plans = [
+  {
+    id: "Oil & Gas",
+    name: "Oil & Gas",
+    features: [
+      "Estudios de viabilidad técnico-económica",
+      "Selección de tecnologías",
+      "Planeamiento maestro de yacimientos",
+      "Ingeniería conceptual",
+      "Ingeniería básica",
+      "Paquetes FEED (Front End Engineering Design)",
+      "Ingeniería de detalle",
+      "Evaluación de desempeño de instalaciones y resolución de problemas en planta",
+      "Optimización de procesos y estudios de ingeniería de valor",
+      "Estudios de riesgos (HAZOP) y consecuencias, disponibilidad y constructibilidad",
+      "Estudios de dispersión y de explosividad",
+      "Estudios SIL (Safety Integrity Level)",
+      "Simulaciones estacionarias y dinámicas de sistemas de flujo multifásicos",
+    ],
+    style: "ring-gray-200",
+    buttonStyle: "bg-indigo-600 text-white hover:bg-indigo-500",
+    textStyle: "text-gray-900",
+  },
+  {
+    id: "Minería",
+    name: "Minería",
+    features: [
+      "Estudios de Ingeniería Básica y de Detalle",
+      "Sistemas de Bombeo de Agua, Relaves y Fluidos de Proceso",
+      "Sistema de Bombeo, Almacenamiento y Despacho de Combustibles",
+      "Sistemas de Generación y Transporte de Oxígeno",
+      "Tratamiento de Aguas",
+      "Sistemas Contra Incendio",
+      "Sistemas de Almacenamiento y transporte de H2SO4, HCl, H2O2",
+      "Automatización de Procesos",
+      "Carreteras",
+      "Talleres de Mantenimiento, Galpones",
+      "Cimentación para equipo vibrante",
+      "Ampliación de líneas eléctricas en Alta y Baja Tensión",
+      "Sub Estaciones y Salas Eléctricas",
+      "Muros Corta Fuego",
+      "Asimismo, adicionalmente ofrecemos:",
+      "Operación y Mantenimiento de Plantas de Combustible",
+      "Supervisión, Pre Comisionado, Comisionado y Puesta en Marcha",
+    ],
+  },
+  {
+    id: "Servicios O&M",
+    name: "Servicios O&M",
+    description: "Dedicated support and infrastructure for your company.",
+    price: "Custom",
+    buttonLabel: "Contact sales",
+    features: [
+      "Diseño, Construcción y Puesta en Marcha de Unidades",
+      "Recepción, Separación, Medición de Gas, Compresión, Ajuste de Punto de Rocío",
+      "Fraccionamiento de Gases Licuables, Almacenamiento y Despacho de Productos",
+      "Garantía de Asistencia Frente a Imprevistos o Cambios en el Proceso",
+      "Herramientas, Equipos, Maquinarias y Vehículos Disponibles",
+      "Provisión de Repuestos y Materiales para Servicios de O&M",
+      "Gestión de Adquisiciones por Delegación del Cliente",
+      "Equipo Especializado: Profesionales y Técnicos en Diferentes Áreas",
+      "Soporte en Calidad y SMS",
+      "Gestión y Perfeccionamiento de Recursos Humanos (RRHH)",
+      "Soporte Técnico a la Gestión Operativa: Mecánica, Electro-Instrumental, Procesos",
+      "Soporte Técnico a la Gestión de Mantenimiento",
+      "Liderazgo y Gerencia de Proyectos",
+    ],
+    style: "bg-gray-900 ring-gray-900",
+    buttonStyle: "bg-white/10 text-white hover:bg-white/20",
+    textStyle: "text-white",
+  },
+  {
+    id: "Servicios Auxiliares",
+    name: "Servicios Auxiliares",
+    description: "Dedicated support and infrastructure for your company.",
+    price: "Custom",
+    buttonLabel: "Contact sales",
+    features: [
+      "Provisión de Personal Técnico y Académico Calificados",
+      "Mantenimiento de Campos y Plantas",
+      "Cumplimiento de Normas y Reglas Establecidas",
+      "Observancia de Normas de Seguridad y Medio Ambiente",
+      "Realización de Análisis de Riesgos",
+      "Habilitación de Personal y Permisos de Trabajo",
+      "Certificaciones Especiales para Inicio de Actividades",
+      "Apoyo Especializado en Operación y Mantenimiento de Instalaciones",
+      "Cierre de Órdenes de Trabajo al Finalizar Actividades",
+      "Servicios Adicionales Según Exigencias del Cliente",
+      "Subcontratación de Servicios Especializados",
+      "Realización de Obras Civiles Mayores y Menores",
+      "Provisión de Personal para Tareas Específicas",
+      "Supervisión Calificada bajo Estándares de Calidad, Seguridad y Medio Ambiente",
+      "Prioridad de Contratación de Mano de Obra Local",
+      "Cobertura de Necesidades con Mano de Obra Nacional en Caso Necesario",
+    ],
+    style: "bg-gray-900 ring-gray-900",
+    buttonStyle: "bg-white/10 text-white hover:bg-white/20",
+    textStyle: "text-white",
+  },
+  {
+    id: "Planificación y Control",
+    name: "Planificación y Control",
+    features: [
+      "Planificación de Actividades para Asegurar el Cumplimiento de Metas",
+      "Minimización de Riesgos Asociados con Cada Actividad",
+      "Preservación de la Seguridad del Personal",
+      "Preservación de los Bienes y Activos de los Clientes",
+      "Mejora de Índices Operativos Durante los Servicios Prestados",
+      "Mejora de Índices de Mantenimiento",
+      "Optimización de Recursos Humanos y Materiales",
+      "Servicio de Calidad Costo-Eficiencia",
+      "Planificación de la Operación y Mantenimiento de Instalaciones",
+      "Sistema Eficiente de Control y Gestión de Mantenimiento",
+      "Planificación de Mantenimiento Preventivo de Equipos Rotativos",
+      "Planificación de Mantenimiento Predictivo de Equipos Rotativos",
+      "Planificación de Mantenimiento Preventivo de Equipos Estáticos",
+      "Planificación de Mantenimiento Predictivo de Equipos Estáticos",
+      "Inspección y Limpieza de Equipos de Proceso",
+      "Intervenciones Mayores de Equipos Rotativos",
+      "Procura y Logística de Materiales, Insumos y Repuestos",
+      "Control de Almacenes e Inventarios",
+      "Control de Variables e Índices Solicitados por el Cliente",
+      "Control de Reportes de Fallas de Unidades Críticas",
+    ],
+  },
+];
+---
+
+<div
+  class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-4 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+>
+  {
+    plans.map((plan, index) => (
+      <div
+        class={`rounded-3xl p-8 ring-1 ${plan.style} xl:p-10 ${index % 2 === 0 ? "bg-primary-dark" : "bg-secondary-dark"}`}
+      >
+        <h3 id={`tier-${plan.id}`} class={`text-2xl/8 font-bold text-white`}>
+          {plan.name}
+        </h3>
+        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-white xl:mt-10">
+          {plan.features.map((feature) => (
+            <li class="flex gap-x-3">
+              <svg
+                class={`h-6 w-5 flex-none text-white`}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
