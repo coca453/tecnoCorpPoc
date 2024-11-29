@@ -26,37 +26,15 @@ const logos = [
 
 const LogoSlider = () => {
   return (
-    <Swiper
-      spaceBetween={30}
-      slidesPerView={1}
-      loop={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-      }}
-      modules={[Autoplay]}
-    >
+    <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
       {logos.map((logo) => (
-        <SwiperSlide key={logo.src}>
-          <img
-            className="w-44 h-32 object-contain mx-auto" // Tamaño más grande
-            src={logo.src}
-            alt={logo.alt}
-          />
-        </SwiperSlide>
+        <img
+          className="w-44 h-32 object-contain mx-auto" // Tamaño más grande
+          src={logo.src}
+          alt={logo.alt}
+        />
       ))}
-    </Swiper>
+    </div>
   );
 };
 

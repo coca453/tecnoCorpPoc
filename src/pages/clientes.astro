@@ -14,13 +14,10 @@ const descripcion =
 <Layout>
   <main>
     <TopSection title={title} description={descripcion} topTitle={topTitle} />
-    <Container hr={true}> <Planificacion /> </Container>
-    <Container pTop={true} pBottom={true}>
+
+    <Container pTop={false} pBottom={true}>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-none">
-          <h2 class="text-lg/8 font-semibold text-gray-900 mb-4">
-            Empresas que nos eligen:
-          </h2>
           <LogoSlider client:load />
         </div>
       </div>

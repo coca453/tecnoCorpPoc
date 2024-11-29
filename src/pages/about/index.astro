@@ -1,0 +1,27 @@
+---
+import AboutUs from "../../components/AboutUs/AboutUs.astro";
+import RH from "../../components/AboutUs/RH.astro";
+import Container from "../../components/Container/Container.astro";
+import TopSection from "../../components/TopSection/TopSection.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const topTitle = "Conoce más sobre nosotros";
+const title = "Quiénes Somos";
+const descripcion =
+  "TECNA CORP. es un holding de empresas  de Tecnología, Ingeniería, Puesta en Marcha y Operación y Mantenimiento especializada en la ejecución de proyectos dentro de los mercados de Industrias Extractivas y de Energía. Conformado por TECNA CORP SL (Madrid), TECNA BOLIVIA, LATINTECNA S.A. (Perú), TECNA CORP del ECUADOR y LATINTECNA S.A. (Argentina). ";
+---
+
+<Layout title="Sobre Nosotros">
+  <main class="overflow-hidden">
+    <TopSection title={title} description={descripcion} topTitle={topTitle} />
+    <Container pBottom={false} pTop={false} hr={true}>
+      <AboutUs />
+    </Container>
+    <!-- <Container pTop={true}>
+      <OurTeam />
+    </Container> -->
+    <Container pBottom={true} pTop={true}>
+      <RH />
+    </Container>
+  </main>
+</Layout>

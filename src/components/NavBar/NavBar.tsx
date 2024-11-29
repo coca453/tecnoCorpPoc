@@ -37,26 +37,22 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 p-5 ${
-        hasScrolled ? "bg-gray-300 shadow-lg" : "bg-transparent"
-      } `}
+      className={`inset-x-0 top-0 z-50 transition-colors duration-300 p-5 bg-primary`}
     >
-      <div className="mx-auto max-w-7xl">
-        <div
-          className={`px-6 pt-6 lg:pl-6 lg:pr-0 ${currentPath === "/" && "lg:max-w-3xl"}`}
-        >
+      <div className="mx-auto max-w-7xl lg:w-full">
+        <div className={`px-6 pt-6 lg:pl-6 lg:pr-0 flex`}>
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
+            <img
+              alt="tecnaCorp Logo"
+              src="/assets/img/LogoMono.webp"
+              className="h-10 w-auto"
+            />
+          </a>
           <nav
             aria-label="Global"
             className={`flex items-center justify-between ${currentPath !== "/" ? "lg:justify-center" : "lg:justify-start"}`}
           >
-            <a href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                alt="tecnaCorp Logo"
-                src="/assets/img/logo.webp"
-                className="h-8 w-auto"
-              />
-            </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -66,13 +62,13 @@ export const NavBar = () => {
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
             <div
-              className={`hidden lg:ml-12 lg:flex lg:gap-x-14 lg:justify-end ${currentPath !== "/" && "w-full lg:justify-around"}`}
+              className={`hidden lg:ml-16 lg:flex lg:gap-x-14 lg:w-full lg:justify-around`}
             >
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-semibold leading-6 text-gray-900"
+                  className="text-xl font-bold leading-6 text-secondary"
                 >
                   {item.name}
                 </a>
