@@ -9,4 +9,8 @@ export default defineConfig({
   integrations: [tailwind(), react(), icon()],
   output: "server",
   adapter: vercel(),
+  experimental: {
+    responsiveImages: true,
+    svg: true,
+  },
 });

@@ -1,0 +1,41 @@
+---
+import MapSVG from "../../../public/assets/img/map.svg";
+
+const location = [
+  {
+    country: "Argentina",
+    empresa: "TecnaCorp",
+    top: 79,
+    left: 33,
+  },
+];
+---
+
+<div
+  class="w-full max-w-4xl m-0 mx-auto relative"
+>
+  <MapSVG
+    fill="red"
+    class="w-full h-full object-contain"
+  />
+  {
+    location.map((empresa) => {
+      return (
+        <div
+          class="absolute bg-blue-950 w-4 h-4 rounded-2xl group"
+          style={{
+            top: `${empresa.top}%`,
+            left: `${empresa.left}%`,
+          }}
+        >
+          <div class="before:content-[''] before:bg-[#4362f8] before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:rounded-full before:animate-pulso">
+            {/* Aquí el tooltip se hace visible al hover */}
+            <span class="hidden group-hover:inline-block whitespace-nowrap absolute left-6 top-1/2 -translate-y-1/2 bg-white rounded p-1 text-sm animate-fadeIn">
+              {empresa.country}
+            </span>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>

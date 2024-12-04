@@ -1,6 +1,10 @@
+import { transform } from "typescript";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -40,15 +44,41 @@ export default {
       },
       keyframes: {
         slideIn: {
-          from: { opacity: 0, transform: "translateY(100px)" },
-          to: { opacity: 1, transform: "translateY(0)" },
+          from: {
+            opacity: 0,
+            transform: "translateY(100px)",
+          },
+          to: {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+        fadeIn: {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+        pulse: {
+          to: {
+            opacity: 0,
+            transform:
+              "translate(-50%, -50%) scale(2.5)",
+          },
         },
       },
       animation: {
         slideIn: "slideIn 2s ease-out",
+        fadeIn: "fadeIn 1s ease-in-out",
+        pulso: "pulse 1.3s ease-in-out infinite",
       },
     },
   },
   darkMode: "media", // O "class" si quieres controlarlo manualmente
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+  ],
 };

@@ -6,11 +6,15 @@ import { Feature } from "../components/Feature/Feature";
 import Contact from "../components/Contact/Contact.astro";
 import CompanyHistory from "../components/CompanyHistory/CompanyHistory.astro";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
+import Map from "../components/Map/Map.astro";
 ---
 
 <Layout title="TECNA Corp - Proyectos Oil&Gas y Energía">
   <main class="overflow-hidden content-center">
-    <section>
+    <Container>
+      <Map />
+    </Container>
+    <!-- <section>
       <div class="bg-gray-300">
         <div class="relative">
           <div class="mx-auto max-w-7xl">
@@ -58,6 +62,6 @@ import ImageSlider from "../components/ImageSlider/ImageSlider";
     </Container>
     <Contact />
 
-    <CompanyHistory />
+    <CompanyHistory /> -->
   </main>
 </Layout>
