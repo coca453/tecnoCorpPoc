@@ -1,0 +1,69 @@
+---
+import MapSVG from "../../../public/assets/img/map.svg";
+
+const location = [
+  {
+    country: "Argentina",
+    empresa: "assets/img/logos/5.webp",
+    top: 80,
+    left: 33,
+  },
+  {
+    country: "Bolivia",
+    empresa: "assets/img/logos/9.webp",
+    top: 77,
+    left: 32,
+  },
+  {
+    country: "Ecuador",
+    empresa: "assets/img/logos/7.webp",
+    top: 68,
+    left: 29,
+  },
+  {
+    country: "España",
+    empresa: "assets/img/logos/1.webp",
+    top: 51.2,
+    left: 46.3,
+  },
+  {
+    country: "Peru",
+    empresa: "assets/img/logos/5.webp",
+    top: 71,
+    left: 31,
+  },
+];
+---
+
+<div
+  class="w-full max-w-4xl m-0 mx-auto relative"
+>
+  <MapSVG
+    fill="#023671"
+    class="w-full h-full object-contain"
+  />
+  {
+    location.map((empresa) => {
+      return (
+        <div
+          class="absolute bg-primary w-2 h-2 rounded-2xl group"
+          style={{
+            top: `${empresa.top}%`,
+            left: `${empresa.left}%`,
+          }}
+        >
+          <div class="before:content-[''] before:bg-primary-light before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:rounded-full before:animate-pulso">
+            {/* Tooltip visible solo al hover */}
+            <div class="hidden lg:group-hover:inline-block whitespace-nowrap absolute left-6 top-1/2 -translate-y-1/2 bg-primary-contrast rounded p-1 text-sm animate-fadeIn">
+              <img
+                src={empresa.empresa}
+                class="max-w-16 lg:max-w-[150px] h-auto"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
