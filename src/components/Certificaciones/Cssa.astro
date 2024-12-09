@@ -1,0 +1,104 @@
+---
+const gestionCSSA = [
+  [
+    {
+      titulo: "Compromiso Integral en Gestión CSSA",
+      descripcion:
+        "TECNA CORP observa primordialmente la Calidad, Seguridad, Salud y Medio Ambiente en la prestación de sus servicios, entendiendo que es la base para una buena gestión y con ello estará en la capacidad de implementar, integrar, operar y mejorar eficiencia en la implementación que contribuyan al cumplimiento de los objetivos y requisitos del Cliente en estricto cumplimiento a la normativa vigente.",
+      gestionVector: [
+        "Conocer y aplicar la legislación relativa a seguridad, medio ambiente y riesgos laborales tanto locales como internacionales.",
+        "Identificar factores de riesgo laborales y desarrollar estrategias de prevención y control.",
+        "Realizar operaciones según códigos y normas locales e internacionales.",
+        "Desarrollar procedimientos específicos de Calidad, Seguridad, Salud Ocupacional y Medio Ambiente, adaptados a los lineamientos del Cliente.",
+        "Eventualmente realizar auditorías de procesos integrados de gestión de Calidad, Seguridad y Medio Ambiente, bajo las directrices de las normas ISO 9001, ISO 14001 e ISO 45001.",
+        "Sobre las bases de las auditorías se procede a diseñar, planificar, implementar, mantener y mejorar sistemas de gestión de calidad, gestión de seguridad, gestión de salud ocupacional y gestión ambiental.",
+        "Integrar sistemas de gestión y Responsabilidad Social Empresarial.",
+      ],
+    },
+  ],
+  [
+    {
+      titulo: "Responsabilidad Social Empresarial",
+      descripcion:
+        "En el ámbito de Responsabilidad Social Empresarial, TECNA CORP sigue los estándares que aplica el Cliente, priorizando el mantenimiento y la aplicación de prácticas aceptables de relacionamiento.",
+      gestionVector: [
+        "El trabajo de Mano de Obra local circunscrita al área de influencia de los servicios.",
+        "Promover políticas salariales acordes al mercado y a la realidad económica regional.",
+        "Priorizar la contratación y consumo de servicios y productos locales en el área de influencia del servicio.",
+        "Promover el buen relacionamiento con actores sociales locales evitando prácticas discriminatorias.",
+        "Promover las buenas prácticas basadas en los principios éticos de la empresa.",
+      ],
+    },
+  ],
+];
+---
+
+<div class="mx-auto max-w-4xl sm:text-center">
+  <h2
+    class="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-balance sm:text-6xl"
+  >
+    Compromiso con la Calidad y Seguridad
+  </h2>
+  <p
+    class="mx-auto mt-6 max-w-2xl text-pretty text-lg font-medium text-gray-500 sm:text-xl/8"
+  >
+    En TECNA CORP, garantizamos una gestión de
+    Calidad, Seguridad, Salud y Medio Ambiente de
+    excelencia. Cumplimos con los estándares
+    locales e internacionales, asegurando
+    soluciones que se alinean con las necesidades
+    del cliente y respetan la normativa vigente.
+    Nuestra prioridad es crear un impacto positivo
+    y sostenible a través de prácticas
+    responsables y eficientes.
+  </p>
+</div>
+<div
+  class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-400 sm:mt-20 lg:mx-0 lg:flex lg:flex-col lg:max-w-none"
+>
+  <div class="p-8 sm:p-10 lg:flex-auto">
+
+    {
+      gestionCSSA.map((grupo) =>
+        grupo.map((gestion) => (
+        <h3 class="text-3xl font-semibold tracking-tight text-gray-900">{gestion.titulo}</h3>
+          <div>
+            <p class="mt-6 text-base/7 text-gray-600">
+              {gestion.descripcion}
+            </p>
+            <div class="mt-10 flex items-center gap-x-4">
+              <h4 class="flex-none text-sm/6 font-semibold text-secondary">
+                Lo que ofrecemos:
+              </h4>
+              <div class="h-px flex-auto bg-gray-400" />
+            </div>
+            <ul
+              role="list"
+              class="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-gray-600 sm:grid-cols-2 sm:gap-6 mb-8"
+            >
+              {gestion.gestionVector.map(
+                (ofrecemos, index) => (
+                  <li class="flex gap-x-3">
+                    <svg
+                      class="h-6 w-5 flex-none text-indigo-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    {ofrecemos}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        ))
+      )
+    }
+  </div>
+</div>
