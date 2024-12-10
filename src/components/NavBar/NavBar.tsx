@@ -12,7 +12,10 @@ import {
 } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Quiénes somos", href: "/about" },
+  {
+    name: "Quiénes somos",
+    href: "/sobrenosotros",
+  },
   { name: "Servicios", href: "/servicios" },
   { name: "Clientes", href: "/clientes" },
   {
