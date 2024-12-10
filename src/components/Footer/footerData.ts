@@ -34,67 +34,55 @@ export const footerData: FooterData = {
   },
   socialLinks: [
     {
-      name: "Facebook",
-      href: "#",
-      icon: "mdi:facebook", // Usaremos Iconify para los íconos
-    },
-    {
-      name: "Instagram",
-      href: "#",
-      icon: "mdi:instagram",
-    },
-    {
-      name: "X",
-      href: "#",
-      icon: "mdi:twitter", // 'X' es el nuevo nombre de Twitter
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: "mdi:github",
-    },
-    {
-      name: "YouTube",
-      href: "#",
-      icon: "mdi:youtube",
+      name: "Linkedin",
+      href: "https://www.linkedin.com/company/tecna-corp/",
+      icon: "mdi:linkedin", // Usaremos Iconify para los íconos
     },
   ],
   sections: [
     {
-      title: "Soluciones",
+      title: "Sobre Nosotros",
       links: [
-        { name: "Marketing", href: "#" },
-        { name: "Analíticas", href: "#" },
-        { name: "Automatización", href: "#" },
-        { name: "Comercio", href: "#" },
-        { name: "Perspectivas", href: "#" },
+        {
+          name: "Nuestra Empresa",
+          href: "/about#about",
+        },
+        {
+          name: "Trabaja con nosotros",
+          href: "/about/work",
+        },
       ],
     },
     {
-      title: "Soporte",
+      title: "Servicios",
       links: [
-        { name: "Enviar ticket", href: "#" },
-        { name: "Documentación", href: "#" },
-        { name: "Guías", href: "#" },
+        {
+          name: "Nuestros servicios",
+          href: "/servicios",
+        },
       ],
     },
     {
       title: "Empresa",
       links: [
-        { name: "Acerca de", href: "#" },
-        { name: "Blog", href: "#" },
-        { name: "Empleos", href: "#" },
-        { name: "Prensa", href: "#" },
+        { name: "Clientes", href: "/clientes" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { name: "Términos de servicio", href: "#" },
-        { name: "Política de privacidad", href: "#" },
+        {
+          name: "Términos de servicio",
+          href: "#",
+        },
+        {
+          name: "Política de privacidad",
+          href: "#",
+        },
         { name: "Licencia", href: "#" },
       ],
     },
   ],
-  legalText: "© 2024 Tu Empresa, Inc. Todos los derechos reservados.",
+  legalText:
+    "© 2024 Tecna Corp, Inc. Todos los derechos reservados.",
 };

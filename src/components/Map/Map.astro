@@ -5,52 +5,49 @@ const location = [
   {
     country: "Argentina",
     empresa: "assets/img/logos/5.webp",
-    top: 80,
-    left: 33,
+    style:
+      "top-[65%] left-[23%] lg:top-[64%] lg:left-[21%]",
   },
   {
     country: "Bolivia",
     empresa: "assets/img/logos/9.webp",
-    top: 77,
-    left: 32,
+    style:
+      "top-[61%] left-[18%] lg:top-[61%] lg:left-[17%]",
   },
   {
     country: "Ecuador",
     empresa: "assets/img/logos/7.webp",
-    top: 68,
-    left: 29,
+    style:
+      "top-[44%] left-[13%] lg:top-[43%] lg:left-[13%]",
   },
   {
     country: "España",
     empresa: "assets/img/logos/1.webp",
-    top: 51.2,
-    left: 46.3,
+    style:
+      "top-[8%] left-[58%] lg:top-[5.2%] lg:left-[59%]",
   },
   {
     country: "Peru",
     empresa: "assets/img/logos/5.webp",
-    top: 71,
-    left: 31,
+    style:
+      "top-[52%] left-[18%] lg:top-[51%] lg:left-[17%]",
   },
 ];
 ---
 
 <div
-  class="w-full max-w-4xl m-0 mx-auto relative"
+  class="w-full max-w-full m-0 mx-auto relative p-4"
 >
   <MapSVG
     fill="#023671"
-    class="w-full h-full object-contain"
+    class="w-full h-full object-contain rounded-xl"
   />
   {
     location.map((empresa) => {
       return (
         <div
-          class="absolute bg-primary w-2 h-2 rounded-2xl group"
-          style={{
-            top: `${empresa.top}%`,
-            left: `${empresa.left}%`,
-          }}
+          aria-label={empresa.country}
+          class={`absolute bg-primary w-2 h-2 lg:w-4 lg:h-4 rounded-2xl group  ${empresa.style}`}
         >
           <div class="before:content-[''] before:bg-primary-light before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:rounded-full before:animate-pulso">
             {/* Tooltip visible solo al hover */}
