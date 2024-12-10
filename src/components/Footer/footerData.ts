@@ -45,11 +45,11 @@ export const footerData: FooterData = {
       links: [
         {
           name: "Nuestra Empresa",
-          href: "/about#about",
+          href: "/sobrenosotros#about",
         },
         {
           name: "Trabaja con nosotros",
-          href: "/about/work",
+          href: "/sobrenosotros/trabajaconnosotros",
         },
       ],
     },
