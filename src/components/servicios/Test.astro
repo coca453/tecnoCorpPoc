@@ -124,29 +124,50 @@ const plans = [
       "Control de Reportes de Fallas de Unidades Críticas",
     ],
   },
+  {
+    id: "Servicios Renovables",
+    name: "Servicios Renovables",
+    features: [
+      "Localización y arrendamiento de terrenos",
+      "Estudios de viabilidad urbanística y medioambiental",
+      "Implantaciones y cálculo de producción con PVSyst",
+      "Gestión y tramitación ante distribuidoras",
+      "Solicitudes de nuevos puntos de acceso y conexión",
+      "Proyectos administrativos y de ejecución de plantas FV",
+      "Ingeniería eléctrica y civil",
+      "Diseño y cálculo de líneas eléctricas de MT/AT",
+      "Diseño y cálculo de subestaciones eléctricas",
+      "Autorizaciones administrativas previas y de construcción",
+      "Estudios de impacto ambiental (DIA)",
+      "Estudios hidrológicos, de drenaje e inundabilidad",
+      "Estudios paisajísticos y de erosión del suelo",
+      "Elaboración de la RBDA (Relación de Bienes y Derechos Afectados)",
+      "Declaración de Utilidad Pública (DUP)",
+      "Proyectos de autoconsumo y FV flotantes en balsas de riego",
+      "Estudios de flujos de potencia",
+      "Cálculo de corrientes de cortocircuito",
+      "Estudios de armónicos y protecciones frente al rayo",
+      "Estudio de ficker y cumplimiento del Código de Red",
+      "Estudios dinámicos y de selectividad de protección",
+      "Operación integral de instalaciones industriales",
+      "Mantenimiento preventivo y correctivo",
+      "Provisión de repuestos y herramientas especiales",
+    ],
+  },
 ];
 ---
 
-<div
-  class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-4 lg:mx-0 lg:max-w-none lg:grid-cols-3"
->
+<div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-4 lg:mx-0 lg:max-w-none lg:grid-cols-3">
   {
     plans.map((plan, index) => (
-      <div
-        class={`rounded-3xl p-8 ring-1 ${plan.style} xl:p-10 ${index % 2 === 0 ? "bg-primary-dark" : "bg-secondary-dark"}`}
-      >
+      <div class={`rounded-3xl p-8 ring-1 ${plan.style} xl:p-10 ${index % 2 === 0 ? "bg-primary-dark" : "bg-secondary-dark"}`}>
         <h3 id={`tier-${plan.id}`} class={`text-2xl/8 font-bold text-white`}>
           {plan.name}
         </h3>
         <ul role="list" class="mt-8 space-y-3 text-sm/6 text-white xl:mt-10">
           {plan.features.map((feature) => (
             <li class="flex gap-x-3">
-              <svg
-                class={`h-6 w-5 flex-none text-white`}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
+              <svg class={`h-6 w-5 flex-none text-white`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
                   d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
