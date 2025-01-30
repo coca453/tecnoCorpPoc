@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && npm run postbuild",
+    "postbuild": "mv dist/client/sitemap-index.xml .vercel/output/static/",
     "preview": "astro preview",
     "astro": "astro"
   },
