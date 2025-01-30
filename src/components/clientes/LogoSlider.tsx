@@ -31,12 +31,14 @@ const logos = [
 
 const LogoSlider = () => {
   return (
-    <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-      {logos.map((logo) => (
+    <div className="grid gap-4 sm:gap-8 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
+      {logos.map((logo, index) => (
         <img
-          className="w-44 h-32 object-contain mx-auto" // Tamaño más grande
+          key={index} // Clave única para cada elemento
+          className="w-52 h-40 object-contain mx-auto"
           src={logo.src}
           alt={logo.alt}
+          loading="lazy" // Mejora el rendimiento al cargar imágenes
         />
       ))}
     </div>
