@@ -15,7 +15,11 @@ export default defineConfig({
     sitemap(),
   ],
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+    output: {
+      static: "./.vercel/output/static", // Directorio estático de salida
+    },
+  }),
   experimental: {
     responsiveImages: true,
     svg: true,
