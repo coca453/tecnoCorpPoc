@@ -1,27 +1,32 @@
 // src/components/LogoSlider.jsx
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay } from "swiper/modules";
 
 const logos = [
-  { src: "/assets/img/Clientes/essac.png", alt: "Transistor" },
-  { src: "/assets/img/Clientes/CNPC.png", alt: "Reform" },
-  { src: "/assets/img/Clientes/conduto.png", alt: "Tuple" },
-  { src: "/assets/img/Clientes/frontera.png", alt: "SavvyCal" },
-  { src: "/assets/img/Clientes/halliburton.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/ipfb-andina.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/NEXA.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/petrobras.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/petroecuador.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/petroperu.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/Repsol.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/solgas.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/total.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/veolia.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/ypfb-chaco.png", alt: "Statamic" },
-  { src: "/assets/img/Clientes/ypfb.png", alt: "Statamic" },
+  { src: "/assets/img/Clientes/essac.png", alt: "Essac" },
+  { src: "/assets/img/Clientes/CNPC.png", alt: "CNPC" },
+  { src: "/assets/img/Clientes/conduto.png", alt: "Conduto" },
+  { src: "/assets/img/Clientes/frontera.png", alt: "Frontera Energy" },
+  { src: "/assets/img/Clientes/halliburton.png", alt: "Halliburton" },
+  { src: "/assets/img/Clientes/ipfb-andina.png", alt: "YPFB Andina" },
+  { src: "/assets/img/Clientes/NEXA.png", alt: "Nexa Resources" },
+  { src: "/assets/img/Clientes/petrobras.png", alt: "Petrobras" },
+  { src: "/assets/img/Clientes/petroecuador.png", alt: "Petroecuador" },
+  { src: "/assets/img/Clientes/petroperu.png", alt: "Petroperú" },
+  { src: "/assets/img/Clientes/Repsol.png", alt: "Repsol" },
+  { src: "/assets/img/Clientes/solgas.png", alt: "Solgas" },
+  { src: "/assets/img/Clientes/total.png", alt: "TotalEnergies" },
+  { src: "/assets/img/Clientes/veolia.png", alt: "Veolia" },
+  { src: "/assets/img/Clientes/ypfb-chaco.png", alt: "YPFB Chaco" },
+  { src: "/assets/img/Clientes/ypfb.png", alt: "YPFB" },
+  { src: "/assets/img/Clientes/petrotal.webp", alt: "PetroTal" },
+  { src: "/assets/img/Clientes/aesa.webp", alt: "AESA" },
+  { src: "/assets/img/Clientes/pacificRubiales.webp", alt: "Pacific Rubiales" },
+  { src: "/assets/img/Clientes/marcobre.webp", alt: "Marcobre" },
+  { src: "/assets/img/Clientes/geopark.webp", alt: "GeoPark" },
+  { src: "/assets/img/Clientes/Cepsa.webp", alt: "Cepsa" },
+  { src: "/assets/img/Clientes/pluspetrol.webp", alt: "Pluspetrol" },
+  { src: "/assets/img/Clientes/ypfRefinacion.webp", alt: "YPF Refinación" },
+  { src: "/assets/img/Clientes/Shell.webp", alt: "Shell" },
+  { src: "/assets/img/Clientes/petrolia.webp", alt: "Petrolia" },
 ];
 
 const LogoSlider = () => {
