@@ -13,23 +13,10 @@ console.log(Astro.generator);
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Astro description"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     <meta name="description" content="test" />
     <ViewTransitions />
     <meta
@@ -44,46 +31,25 @@ console.log(Astro.generator);
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Metadata -->
-    <meta
-      property="og:title"
-      content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales"
-    />
+    <meta property="og:title" content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales" />
     <meta
       property="og:description"
       content="TECNA CORP ofrece soluciones integrales en Ingeniería, Puesta en Marcha, Operación y Mantenimiento para los sectores de Oil & Gas, Minería y Energía."
     />
-    <meta
-      property="og:image"
-      content="https://www.tecna-corp.com/assets/images/og-image.jpg"
-    />
-    <meta
-      property="og:image:alt"
-      content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales"
-    />
-    <meta
-      property="og:url"
-      content="https://www.tecna-corp.com"
-    />
+    <meta property="og:image" content="https://www.tecna-corp.com/assets/images/logo.webp" />
+    <meta property="og:image:alt" content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales" />
+    <meta property="og:url" content="https://www.tecna-corp.com" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
 
     <!-- LinkedIn Specific Metadata -->
-    <meta
-      property="og:site_name"
-      content="TECNA CORP"
-    />
-    <meta
-      name="linkedin:title"
-      content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales"
-    />
+    <meta property="og:site_name" content="TECNA CORP" />
+    <meta name="linkedin:title" content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales" />
     <meta
       name="linkedin:description"
       content="Más de 20 años de experiencia ejecutando proyectos en los sectores de Oil & Gas, Minería y Energía en Latinoamérica."
     />
-    <meta
-      name="linkedin:url"
-      content="https://www.linkedin.com/company/tecna-corp/"
-    />
+    <meta name="linkedin:url" content="https://www.linkedin.com/company/tecna-corp/" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -94,11 +60,7 @@ console.log(Astro.generator);
         "url": "https://www.tecna-corp.com",
         "logo": "https://www.tecna-corp.com/assets/images/logo.png",
         "description": "TECNA CORP: Holding especializado en Ingeniería, Tecnología y Operación en los sectores de Oil & Gas, Minería y Energía.",
-        "sameAs": [
-          "https://www.linkedin.com/company/tecna-corp",
-          "https://www.facebook.com/tecna.corp",
-          "https://twitter.com/tecnacorp"
-        ],
+        "sameAs": ["https://www.linkedin.com/company/tecna-corp", "https://www.facebook.com/tecna.corp", "https://twitter.com/tecnacorp"],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+591 3 336 2263",
@@ -145,11 +107,7 @@ console.log(Astro.generator);
     </script>
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      href="https://www.tecna-corp.com/assets/images/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="https://www.tecna-corp.com/assets/images/favicon.ico" type="image/x-icon" />
 
     <title>{title}</title>
   </head>
@@ -165,12 +123,7 @@ console.log(Astro.generator);
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
   }
   html {
     font-family: system-ui, sans-serif;
