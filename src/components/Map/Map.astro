@@ -2,36 +2,36 @@
 import MapSVG from "../../../public/assets/img/map.svg";
 
 const location = [
-  {
-    country: "Argentina",
-    empresa: "assets/img/logos/5.webp",
-    style:
-      "top-[65%] left-[23%] lg:top-[64%] lg:left-[21%]",
-  },
-  {
-    country: "Bolivia",
-    empresa: "assets/img/logos/9.webp",
-    style:
-      "top-[61%] left-[18%] lg:top-[61%] lg:left-[17%]",
-  },
-  {
-    country: "Ecuador",
-    empresa: "assets/img/logos/7.webp",
-    style:
-      "top-[44%] left-[13%] lg:top-[43%] lg:left-[13%]",
-  },
-  {
-    country: "España",
-    empresa: "assets/img/logos/1.webp",
-    style:
-      "top-[8%] left-[58%] lg:top-[5.2%] lg:left-[59%]",
-  },
-  {
-    country: "Peru",
-    empresa: "assets/img/logos/5.webp",
-    style:
-      "top-[52%] left-[18%] lg:top-[51%] lg:left-[17%]",
-  },
+	{
+		country: "Argentina",
+		empresa: "assets/img/logos/5.webp",
+		style:
+			"top-[66%] left-[23%] sm:top-[67%] sm:left-[22.5%] md:top-[67%] md:left-[22%] lg:top-[67%] lg:left-[21%]",
+	},
+	{
+		country: "Bolivia",
+		empresa: "assets/img/logos/9.webp",
+		style:
+			"top-[61%] left-[18%] sm:top-[61%] sm:left-[18%] md:top-[59%] md:left-[18%] lg:top-[61%] lg:left-[17%]",
+	},
+	{
+		country: "Peru",
+		empresa: "assets/img/logos/5.webp",
+		style:
+			"top-[52%] left-[18%] sm:top-[52%] sm:left-[18%] md:top-[51%] md:left-[17%] lg:top-[51%] lg:left-[17%]",
+	},
+	{
+		country: "Ecuador",
+		empresa: "assets/img/logos/7.webp",
+		style:
+			"top-[44%] left-[13%] sm:top-[44%] sm:left-[13%] md:top-[43%] md:left-[13%] lg:top-[43%] lg:left-[13%]",
+	},
+	{
+		country: "España",
+		empresa: "assets/img/logos/1.webp",
+		style:
+			"top-[8%] left-[58%] sm:top-[6%] sm:left-[59%] md:top-[6%] md:left-[59%] lg:top-[5.2%] lg:left-[59%]",
+	},
 ];
 ---
 
@@ -47,11 +47,11 @@ const location = [
       return (
         <div
           aria-label={empresa.country}
-          class={`absolute bg-primary w-2 h-2 lg:w-4 lg:h-4 rounded-2xl group  ${empresa.style}`}
+          class={`absolute bg-primary w-[0.3rem] h-[0.3rem] sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-4 lg:h-4 rounded-2xl group  ${empresa.style}`}
         >
           <div class="before:content-[''] before:bg-primary-light before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:rounded-full before:animate-pulso">
             {/* Tooltip visible solo al hover */}
-            <div class="hidden lg:group-hover:inline-block whitespace-nowrap absolute left-6 top-1/2 -translate-y-1/2 bg-primary-contrast rounded p-1 text-sm animate-fadeIn">
+            <div class="hidden lg:group-hover:inline-block whitespace-nowrap absolute left-6 top-1/2 -translate-y-1/2 bg-primary-contrast rounded p-1 text-sm animate-fadeIn  ">
               <img
                 src={empresa.empresa}
                 class="max-w-16 lg:max-w-[150px] h-auto"
