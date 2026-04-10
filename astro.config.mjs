@@ -20,8 +20,4 @@ export default defineConfig({
       static: "./.vercel/output/static", // Directorio estático de salida
     },
   }),
-  experimental: {
-    responsiveImages: true,
-    svg: true,
-  },
 });

@@ -2,113 +2,45 @@
 import "../style/global.css";
 import { NavBar } from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer.astro";
+import SEO from "../components/SEO/SEO.astro";
+import { siteConfig, organizationSchema } from "../lib/seoConfig";
 
-import { ViewTransitions } from "astro:transitions";
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+}
 
-const { title } = Astro.props;
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+  image = siteConfig.image,
+  url = Astro.url.href,
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-  <!-- Cambiado de 'en' a 'es' -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content="Astro" />
-    <!-- Valor estático agregado -->
-    <meta
-      name="description"
-      content="TECNA CORP: Holding especializado en Tecnología, Ingeniería, Puesta en Marcha y Operación y Mantenimiento en los sectores de Oil & Gas, Minería y Energía, con más de 20 años de experiencia en Latinoamérica."
-    />
-    <meta
-      name="keywords"
-      content="TECNA CORP, Ingeniería, Oil & Gas, Minería, Energía, Puesta en Marcha, Operación y Mantenimiento, Proyectos Llave en Mano, Plantas Modulares, Automatización y Control"
-    />
-    <meta name="author" content="TECNA CORP" />
-    <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales" />
-    <meta
-      property="og:description"
-      content="TECNA CORP ofrece soluciones integrales en Ingeniería, Puesta en Marcha, Operación y Mantenimiento para los sectores de Oil & Gas, Minería y Energía."
-    />
-    <meta property="og:image" content="https://www.tecna-corp.com/assets/images/logo.webp" />
-    <meta property="og:image:alt" content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales" />
-    <meta property="og:url" content="https://www.tecna-corp.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:site_name" content="TECNA CORP" />
+    <!-- SEO Component -->
+    <SEO {title} {description} {image} {url} />
 
-    <!-- LinkedIn Specific Metadata -->
-    <meta name="linkedin:title" content="TECNA CORP: Líder en Ingeniería y Proyectos Industriales" />
-    <meta
-      name="linkedin:description"
-      content="Más de 20 años de experiencia ejecutando proyectos en los sectores de Oil & Gas, Minería y Energía en Latinoamérica."
-    />
-    <meta name="linkedin:url" content="https://www.linkedin.com/company/tecna-corp/" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TECNA CORP",
-        "url": "https://www.tecna-corp.com",
-        "logo": "https://www.tecna-corp.com/assets/images/logo.png",
-        "description": "TECNA CORP: Holding especializado en Ingeniería, Tecnología y Operación en los sectores de Oil & Gas, Minería y Energía.",
-        "sameAs": ["https://www.linkedin.com/company/tecna-corp", "https://www.facebook.com/tecna.corp", "https://twitter.com/tecnacorp"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+591 3 336 2263",
-          "email": "contacto@tecna-corp.com",
-          "contactType": "customer service",
-          "areaServed": ["Bolivia", "Perú", "Ecuador", "Argentina", "España"]
-        },
-        "address": [
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Av. Las Ramblas, Piso 10",
-            "addressLocality": "Santa Cruz de la Sierra",
-            "addressRegion": "Equipetrol Norte",
-            "addressCountry": "BO"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Calle La Habana 192",
-            "addressLocality": "San Isidro, Lima",
-            "addressCountry": "PE"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Av Luis Cordero E12-182 y Valladolid",
-            "addressLocality": "Quito",
-            "addressCountry": "EC"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Avª Alicia Moreau de Justo 2030, 1er piso Of. 120",
-            "addressLocality": "CABA",
-            "postalCode": "1107",
-            "addressCountry": "AR"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Paseo de la Castellana, num 144 ESC. 1, planta 6",
-            "addressLocality": "Madrid",
-            "postalCode": "28046",
-            "addressCountry": "ES"
-          }
-        ]
-      }
-    </script>
+    <!-- Organization Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- Usando favicon local -->
-    <title>{title || "TECNA CORP"}</title>
-    <!-- Título dinámico con valor por defecto -->
+    <title>{title}</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
   </head>
   <body class="antialiased bg-gray-300">
     <NavBar client:load aria-label="Menú de navegación principal" />
