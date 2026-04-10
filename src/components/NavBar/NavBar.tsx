@@ -37,7 +37,6 @@ export const NavBar = () => {
     setCurrentPath(window.location.pathname);
   }, []);
 
-  console.log(currentPath);
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -70,7 +69,7 @@ export const NavBar = () => {
         >
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">
-              Your Company
+              TECNA CORP - Ir al inicio
             </span>
             <img
               alt="tecnaCorp Logo"
@@ -105,6 +104,7 @@ export const NavBar = () => {
                   key={item.name}
                   href={item.href}
                   className="text-xl font-bold leading-6 text-secondary"
+                  aria-current={currentPath === item.href ? "page" : undefined}
                 >
                   {item.name}
                 </a>

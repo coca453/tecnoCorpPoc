@@ -25,8 +25,11 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content="Astro" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- SEO Component -->
     <SEO {title} {description} {image} {url} />
@@ -34,12 +37,9 @@ const {
     <!-- Organization Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <title>{title}</title>
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- DNS prefetch -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
   </head>
   <body class="antialiased bg-gray-300">
@@ -50,12 +50,6 @@ const {
 </html>
 
 <style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-  }
   html {
     font-family: system-ui, sans-serif;
     color: #f3f4f6; /* Agregado para mejor contraste */

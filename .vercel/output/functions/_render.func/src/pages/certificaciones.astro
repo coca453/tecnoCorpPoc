@@ -1,0 +1,32 @@
+---
+import CertificacionesBlog from "../components/Certificaciones/CertificacionesBlog.astro";
+import Cssa from "../components/Certificaciones/Cssa.astro";
+import Container from "../components/Container/Container.astro";
+import TopSection from "../components/TopSection/TopSection.astro";
+import Layout from "../layouts/Layout.astro";
+
+const topTitle =
+  "Compromiso con la Calidad y la Seguridad";
+const title = "Nuestras Certificaciones";
+const descripcion =
+  "TECNA CORP cuenta con certificaciones internacionales, incluyendo ISO 9001 para gestión de calidad, ISO 14001 para gestión ambiental y ISO 45001 para seguridad y salud ocupacional. Estas certificaciones reflejan nuestro compromiso con los más altos estándares en cada proyecto.";
+---
+
+<Layout
+  title="Certificaciones | TECNA CORP"
+  description="Certificaciones internacionales ISO 9001, ISO 14001 e ISO 45001. Compromiso con calidad, ambiente y seguridad en todos nuestros proyectos."
+>
+  <main class="overflow-hidden">
+    <TopSection
+      title={title}
+      description={descripcion}
+      topTitle={topTitle}
+    />
+    <Container pBottom={true}>
+      <CertificacionesBlog />
+    </Container>
+    <Container pBottom={true}>
+      <Cssa />
+    </Container>
+  </main>
+</Layout>

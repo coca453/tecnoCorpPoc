@@ -13,12 +13,9 @@ export const CargaCV = () => {
   ) => {
     const file = event.target.files?.[0];
     if (file) {
-      console.log("Uploaded file:", file);
-
-      // Cambiar el estado a true
+      // TODO: Implementar envío real del archivo a servidor
       setFileUploaded(true);
     } else {
-      // Cambiar el estado a false si no hay archivo
       setFileUploaded(false);
     }
   };
@@ -33,16 +30,11 @@ export const CargaCV = () => {
       formData.entries()
     );
 
-    console.log("Form Values:", values);
-
+    // TODO: Enviar datos a servidor con fetch/axios
     if (fileUploaded) {
-      console.log(
-        "Archivo cargado correctamente."
-      );
+      // Archivo listo para enviar
     } else {
-      console.log(
-        "Por favor, cargue un archivo."
-      );
+      // Mostrar error al usuario
     }
   };
 

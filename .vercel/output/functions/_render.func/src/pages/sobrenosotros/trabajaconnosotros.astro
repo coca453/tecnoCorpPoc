@@ -1,0 +1,58 @@
+---
+import { CargaCV } from "../../components/AboutUs/CargaCV";
+import Container from "../../components/Container/Container.astro";
+import TopSection from "../../components/TopSection/TopSection.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const topTitle = "";
+const title = "Trabaja con nosotros";
+const descripcion =
+  "Si te consideras identificado con los valores de nuestra marca y el sentido de pertenencia te alentamos a que formes parte de la corporación. Sumate al equipo de TECNA CORP";
+---
+
+<Layout title="Trabaja con Nosotros">
+  <main class="overflow-hidden">
+    <TopSection
+      title={title}
+      description={descripcion}
+      topTitle={topTitle}
+    />
+    <Container pBottom={true}>
+      <div
+        class="bg-secondary-dark p-10 rounded-xl"
+      >
+        <div
+          class="space-y-10 divide-y divide-gray-900/10"
+        >
+          <div
+            class="grid grid-cols-1 gap-x-8
+          gap-y-8 md:grid-cols-3"
+          >
+            <div class="px-4 sm:px-0">
+              <h2
+                class="text-base/7 font-semibold text-secondary-contrast"
+              >
+                Perfil
+              </h2>
+              <p
+                class="mt-1 text-sm/6 text-gray-300"
+              >
+                Esta información será visible para
+                los empleadores potenciales, así
+                que asegúrate de compartir
+                detalles que te destaquen como
+                candidato, manteniendo siempre la
+                discreción sobre datos personales
+                sensibles. Comparte tus
+                habilidades, experiencia y aquello
+                que te haga el mejor para el
+                puesto que buscas.
+              </p>
+            </div>
+            <CargaCV client:idle />
+          </div>
+        </div>
+      </div>
+    </Container>
+  </main>
+</Layout>

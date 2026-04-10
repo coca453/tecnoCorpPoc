@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo/Logo.astro";
+import Container from "../components/Container/Container.astro";
+import { Feature } from "../components/Feature/Feature";
+import Contact from "../components/Contact/Contact.astro";
+import CompanyHistory from "../components/CompanyHistory/CompanyHistory.astro";
+import ImageSlider from "../components/ImageSlider/ImageSlider";
+import MapSection from "../components/Map/MapSection.astro";
+---
+
+<Layout
+  title="TECNA CORP | Soluciones en Ingeniería Industrial"
+  description="Soluciones integrales en ingeniería, puesta en marcha y operación para Oil & Gas, Minería y Energía en Latinoamérica. Más de 20 años de experiencia."
+>
+  <main class="overflow-hidden content-center">
+    <section>
+      <div class="bg-gray-300">
+        <div class="relative">
+          <div class="mx-auto max-w-7xl">
+            <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
+              <svg
+                class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-gray-300 lg:block"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <polygon points="0,0 90,0 50,100 0,100"></polygon>
+              </svg>
+
+              <div class="relative px-6 py-32 sm:py-24 lg:px-8 lg:py-64 lg:pr-0">
+                <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                  <img src="assets/img/logo.webp" class="w-60 md:w-72" alt="" />
+                  <p class="mt-6 text-lg leading-8 text-gray-600">
+                    Especialista en ejecutar proyectos en el sector Oil & Gas, Generación de Energía y Minería
+                  </p>
+                  <div class="mt-10 flex items-center gap-x-6">
+                    <a
+                      href="/sobrenosotros"
+                      class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      >Sobre Nosotros</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <ImageSlider client:load />
+          </div>
+        </div>
+      </div>
+    </section>
+    <Container pBottom={true}>
+      <Logo />
+    </Container>
+    <Container>
+      <MapSection />
+    </Container>
+    <Container pBottom={true} pTop={false}>
+      <Feature />
+    </Container>
+    <Contact />
+
+    <CompanyHistory />
+  </main>
+</Layout>
