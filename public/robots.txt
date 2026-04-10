@@ -1,0 +1,33 @@
+# Robots.txt para TECNA CORP
+# Última actualización: Abril 2025
+
+# Permitir a todos los buscadores
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.vercel/
+Disallow: /node_modules/
+
+# Configuración específica para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Desautorizar bots maliciosos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap
+Sitemap: https://www.tecna-corp.com/sitemap-0.xml

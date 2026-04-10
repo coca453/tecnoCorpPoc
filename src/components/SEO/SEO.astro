@@ -1,0 +1,59 @@
+---
+/**
+ * Componente SEO reutilizable para Astro
+ * Uso: <SEO title="..." description="..." image="..." />
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  author?: string;
+  type?: "website" | "article" | "organization";
+  twitterHandle?: string;
+}
+
+const {
+  title,
+  description,
+  image = "https://www.tecna-corp.com/assets/images/og-image.webp",
+  url = Astro.url.href,
+  author = "TECNA CORP",
+  type = "website",
+  twitterHandle = "@tecnacorp",
+} = Astro.props;
+
+const canonicalURL = new URL(url, Astro.site);
+---
+
+<!-- Metadatos básicos -->
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:image:alt" content={title} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:type" content={type} />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="TECNA CORP" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:site" content={twitterHandle} />
+<meta name="twitter:creator" content={twitterHandle} />
+
+<!-- LinkedIn -->
+<meta name="linkedin:title" content={title} />
+<meta name="linkedin:description" content={description} />
+<meta name="linkedin:url" content={canonicalURL} />
